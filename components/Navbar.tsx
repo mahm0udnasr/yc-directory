@@ -2,9 +2,6 @@ import React from 'react'
 import Link from "next/link";
 import Image from "next/image";
 import {auth, signOut, signIn} from "@/auth";
-import {Love_Ya_Like_A_Sister} from "next/dist/compiled/@next/font/dist/google";
-import {sendError} from "next/dist/server/api-utils";
-import {options} from "preact";
 
 const Navbar = async () => {
     const session = await auth();
