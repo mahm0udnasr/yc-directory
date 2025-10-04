@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import localFont from "next/font/local";
+import "./globals.css";
+import "easymde/dist/easymde.min.css";
 
 const workSans = localFont({
   src: [
@@ -50,7 +51,8 @@ const workSans = localFont({
 
 export const metadata: Metadata = {
   title: "YC Directory | Discover Top Y Combinator Startups",
-  description: "Explore and search the most promising Y Combinator startups. Find company profiles, funding info, and rankings in the YC Directory.",
+  description:
+    "Explore and search the most promising Y Combinator startups. Find company profiles, funding info, and rankings in the YC Directory.",
   keywords: [
     "Y Combinator",
     "YC Directory",
@@ -60,11 +62,12 @@ export const metadata: Metadata = {
     "YC companies",
     "startup profiles",
     "startup funding",
-    "startup search"
+    "startup search",
   ],
   openGraph: {
     title: "YC Directory | Discover Top Y Combinator Startups",
-    description: "Explore and search the most promising Y Combinator startups. Find company profiles, funding info, and rankings in the YC Directory.",
+    description:
+      "Explore and search the most promising Y Combinator startups. Find company profiles, funding info, and rankings in the YC Directory.",
     url: "*",
     siteName: "YC Directory",
     type: "website",
