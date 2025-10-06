@@ -19,3 +19,23 @@ export const STARTUPS_QUERY = defineQuery(`
       image
     }
 `);
+
+
+export const STARTUP_BY_SLUG_QUERY = defineQuery(`*[_type == "startup" && slug.current == $slug][0]  {
+  _id,
+  _createdAt,
+  author -> {
+    _id,
+    name,
+    username,
+    image,
+    bio
+  },
+  title,
+  slug,
+  description,
+  views,
+  category,
+  image,
+  pitch
+}`);
