@@ -20,8 +20,8 @@ export const STARTUPS_QUERY = defineQuery(`
     }
 `);
 
-
-export const STARTUP_BY_SLUG_QUERY = defineQuery(`*[_type == "startup" && slug.current == $slug][0]  {
+export const STARTUP_BY_SLUG_QUERY =
+  defineQuery(`*[_type == "startup" && slug.current == $slug][0]  {
   _id,
   _createdAt,
   author -> {
@@ -39,3 +39,9 @@ export const STARTUP_BY_SLUG_QUERY = defineQuery(`*[_type == "startup" && slug.c
   image,
   pitch
 }`);
+
+export const STARTUP_VIEWS_QUERY = defineQuery(`
+  *[_type == "startup" && _id == $id][0] {
+    _id,
+    views
+  }`);
