@@ -13,7 +13,6 @@ const View = async ({ id }: { id: string }) => {
     })
     .fetch(STARTUP_VIEWS_QUERY, { id });
 
-  // TODO: Update the number of views
   after(
     async () =>
       await writeClient
@@ -28,7 +27,11 @@ const View = async ({ id }: { id: string }) => {
         <Ping />
       </div>
       <p className="view-text">
-        <span className="font-black">{formatViewsNumber(totalViews)}</span>
+        <span className="font-black">
+          {totalViews < 1
+            ? formatViewsNumber(0)
+            : formatViewsNumber(totalViews)}
+        </span>
       </p>
     </div>
   );
