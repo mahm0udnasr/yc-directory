@@ -36,7 +36,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           alt="thumbnail"
           className="w-full h-auto rounded-xl"
         />
-        <div className="space-y-5 mt-10 max-w-4xp mx-auto">
+        <div className="space-y-5 mt-10 max-w-4xl mx-auto">
           <div className="flex-between gap-5">
             <Link
               href={`/user/${post?.author?._id}`}
