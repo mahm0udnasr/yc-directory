@@ -7,11 +7,24 @@
     "start": "next start",
     "lint": "eslint"
   },
+  "overrides": {
+    "next-auth": {
+      "next": "15.6.0-canary.52"
+    },
+    "next-sanity": {
+      "next": "15.6.0-canary.52"
+    },
+    "@sanity/visual-editing": {
+      "next": "15.6.0-canary.52"
+    }
+  },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-toast": "^1.2.15",
     "@sanity/image-url": "^1.2.0",
     "@sanity/vision": "^4.10.2",
     "@tailwindcss/typography": "^0.5.19",
+    "@uiw/react-md-editor": "^4.0.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.544.0",
