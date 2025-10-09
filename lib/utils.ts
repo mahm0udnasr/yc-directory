@@ -16,3 +16,7 @@ export function formatDate(date: string) {
 export function formatViewsNumber(views: number) {
   return views < 10 ? `${views} view` : `${views} views`;
 }
+
+export function parseServerActionResponse<T>(response: T) {
+  return JSON.parse(JSON.stringify(response));
+}
